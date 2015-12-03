@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C1AF8A61C0F9769001661FA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1AF8A51C0F9769001661FA /* SettingsViewController.swift */; };
 		8CC82B1F1C0D6C1400873ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC82B1E1C0D6C1400873ADF /* AppDelegate.swift */; };
 		8CC82B211C0D6C1400873ADF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC82B201C0D6C1400873ADF /* ViewController.swift */; };
 		8CC82B241C0D6C1400873ADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC82B221C0D6C1400873ADF /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C1AF8A51C0F9769001661FA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8CC82B1B1C0D6C1300873ADF /* tips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC82B1E1C0D6C1400873ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CC82B201C0D6C1400873ADF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		8CC82B1D1C0D6C1400873ADF /* tips */ = {
 			isa = PBXGroup;
 			children = (
+				8C1AF8A51C0F9769001661FA /* SettingsViewController.swift */,
 				8CC82B1E1C0D6C1400873ADF /* AppDelegate.swift */,
 				8CC82B201C0D6C1400873ADF /* ViewController.swift */,
 				8CC82B221C0D6C1400873ADF /* Main.storyboard */,
@@ -199,6 +202,7 @@
 			files = (
 				8CC82B211C0D6C1400873ADF /* ViewController.swift in Sources */,
 				8CC82B1F1C0D6C1400873ADF /* AppDelegate.swift in Sources */,
+				8C1AF8A61C0F9769001661FA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +333,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kwakuowusu.tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -340,6 +345,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kwakuowusu.tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -386,6 +392,7 @@
 				8CC82B3A1C0D6C1400873ADF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CC82B3B1C0D6C1400873ADF /* Build configuration list for PBXNativeTarget "tipsTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +401,7 @@
 				8CC82B3D1C0D6C1400873ADF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
