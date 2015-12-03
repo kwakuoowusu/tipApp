@@ -40,9 +40,13 @@ class ViewController: UIViewController {
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
+        if(NSString(string:billField.text!).doubleValue == 0){
+            
+        
         self.totalLabel.alpha = 0
         self.tipControl.alpha = 0
-        
+        }
         
         let defaults = NSUserDefaults.standardUserDefaults()
        
