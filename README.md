@@ -1,7 +1,7 @@
 # tipApp
 A tip calculator for [codepath](www.codepath.com) at Stony Brook University
-![main page][/mainscreen.png]
-![settings][/settings.png]
+![main page](/mainscreen.png)
+![settings](/settings.png)
 
 ## Version 1.0.0 Features
 
