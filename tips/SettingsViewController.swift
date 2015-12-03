@@ -16,7 +16,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let defaults = NSUserDefaults.standardUserDefaults()
-        //let stringValue = defaults.objectForKey("loadString") as! String
+        //gets array index of segment controller and makes it default
         if let defaultIndex = defaults.objectForKey("loadInt"){
             
                 defaultTipSegmentedControl.selectedSegmentIndex = defaultIndex as! Int
@@ -25,13 +25,6 @@ class SettingsViewController: UIViewController {
             defaultTipSegmentedControl.selectedSegmentIndex = 0
             
         }
-        
-        
-        
-        //on loading make default tip percentage equal saved index
-        //defaultTipSegmentedControl.selectedSegmentIndex  = defaultIndex
-      
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +32,7 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //when default is changed it is saved into NSUserDefaultts
     @IBAction func onSegmentChanged(sender: UISegmentedControl) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(defaultTipSegmentedControl.selectedSegmentIndex,forKey: "loadInt")
@@ -46,20 +40,12 @@ class SettingsViewController: UIViewController {
         print("saved")
     }
     
+    //when back button pressed get sent back to main view controller
     @IBAction func onBackPressed(sender: UIBarButtonItem) {
         
         navigationController?.popViewControllerAnimated(true)
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

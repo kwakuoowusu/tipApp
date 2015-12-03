@@ -21,10 +21,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+     
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
         
+        //load up user prefrences
         let defaults = NSUserDefaults.standardUserDefaults()
 
         if let defaultIndex = defaults.objectForKey("loadInt"){
@@ -41,6 +42,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        //if billfield is empty make the labels fade
         if(NSString(string:billField.text!).doubleValue == 0){
             
         
@@ -48,6 +50,7 @@ class ViewController: UIViewController {
         self.tipControl.alpha = 0
         }
         
+        //load up user prefs
         let defaults = NSUserDefaults.standardUserDefaults()
        
         if let defaultIndex = defaults.objectForKey("loadInt"){
@@ -67,9 +70,8 @@ class ViewController: UIViewController {
 
 
     @IBAction func onEditingChanged(sender: AnyObject) {
-        
-        UIView.animateWithDuration(0.4, animations: {
-            // This causes first view to fade in and second view to fade out
+    UIView.animateWithDuration(0.4, animations: {
+        //makes labels appear
             self.totalLabel.alpha = 1
             self.tipControl.alpha = 1
         })
@@ -84,7 +86,7 @@ class ViewController: UIViewController {
     totalLabel.text = "\(total)"
         
     tipLabel.text = String(format: "$%.2f", tip)
-    totalLabel.text = String(format: "$%.2f", tip)
+    totalLabel.text = String(format: "$%.2f", total)
 
     }
     @IBAction func onTap(sender: AnyObject) {
