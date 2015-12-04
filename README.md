@@ -33,8 +33,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
-
+Definitely learniing how to use nsuserdefaults with segmented controlls
 ## License
 
     Copyright [2015] [Kwaku Owusu]

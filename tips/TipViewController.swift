@@ -36,7 +36,8 @@ class TipViewController: UIViewController {
             tipControl.selectedSegmentIndex = 0
             
         }
-
+        self.billField.becomeFirstResponder()
+        
         
     }
     override func viewDidAppear(animated: Bool) {
@@ -61,6 +62,7 @@ class TipViewController: UIViewController {
             tipControl.selectedSegmentIndex = 0
             
         }
+        self.billField.becomeFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {
