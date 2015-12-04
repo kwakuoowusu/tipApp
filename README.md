@@ -14,5 +14,5 @@ A tip calculator for [codepath](www.codepath.com) at Stony Brook University
 
 
 ##Screenshots
-![main page](/mainscreen.png)
-![settings](/settings.png)
+![main page](/media/mainpage.png)
+![settings](/media/settings.png)
