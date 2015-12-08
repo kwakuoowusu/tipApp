@@ -26,7 +26,7 @@ The following **additional** features are implemented:
 - [x] Bill total Fades when there is nothing listed 
 
 ## Video Walkthrough 
----
+
 Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/NNvMAwO.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
@@ -34,9 +34,9 @@ Here's a walkthrough of implemented user stories:
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
----
+
 ## License
----
+
     Copyright [2015] [Kwaku Owusu]
 
     Licensed under the Apache License, Version 2.0 (the "License");
