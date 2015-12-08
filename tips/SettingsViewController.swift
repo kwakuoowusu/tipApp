@@ -37,7 +37,6 @@ class SettingsViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(defaultTipSegmentedControl.selectedSegmentIndex,forKey: "loadInt")
         defaults.synchronize()
-        print("saved")
     }
     
     //when back button pressed get sent back to main view controller
