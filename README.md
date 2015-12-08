@@ -7,6 +7,7 @@ Submitted by: **Kwaku Owusu**
 Time spent: **2** hours spent in total
 
 ## User Stories
+The most interesting thing i learned how to do was integrating nsuserdefaults with segmented controlls
 
 The following **required** functionality is complete:
 
@@ -33,7 +34,6 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Definitely learniing how to use nsuserdefaults with segmented controlls
 ## License
 
     Copyright [2015] [Kwaku Owusu]
