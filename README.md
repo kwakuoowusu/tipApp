@@ -2,12 +2,12 @@
 
 **Tip Calculator** is a tip calculator application for iOS.
 
+
 Submitted by: **Kwaku Owusu**
 
 Time spent: **3.5** hours spent in total
 
 ## User Stories
-
 The following **required** functionality is complete:
 
 * [x] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
@@ -33,7 +33,6 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Definitely learniing how to use nsuserdefaults with segmented controlls
 ## License
 
     Copyright [2015] [Kwaku Owusu]
