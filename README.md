@@ -1,7 +1,7 @@
 # Pre-work - *Tip Calculator *
 
 **Tip Calculator** is a tip calculator application for iOS.
----
+
 
 Submitted by: **Kwaku Owusu**
 
@@ -9,7 +9,7 @@ Time spent: **2** hours spent in total
 
 ## User Stories
 The most interesting thing i learned how to do was integrating nsuserdefaults with segmented controlls
----
+
 The following **required** functionality is complete:
 
 * [x] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
