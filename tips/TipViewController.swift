@@ -14,7 +14,12 @@ class TipViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var onePayerLabel: UILabel!
+    @IBOutlet weak var twoPayerLabel: UILabel!
+    @IBOutlet weak var threePayerLabel: UILabel!
+    @IBOutlet weak var fourPayerLabel: UILabel!
     
+    @IBOutlet weak var billInfo: UIView!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
     
@@ -25,7 +30,7 @@ class TipViewController: UIViewController {
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
         
-        //load up user prefrences
+        //load up user preferences
         let defaults = NSUserDefaults.standardUserDefaults()
 
         if let defaultIndex = defaults.objectForKey("loadInt"){
@@ -51,9 +56,8 @@ class TipViewController: UIViewController {
             let currentMinutes = components.minute
             
            
-            if (loadedMinutes <= 50&&currentMinutes - loadedMinutes < 10){
-                print("less 50")
-                print (loadedMinutes)
+            if (loadedMinutes <= 50 && currentMinutes <= 50 && currentMinutes - loadedMinutes < 10){
+                
                 if (currentMinutes > loadedMinutes + 10){
                     billField.text = ""
                 }
@@ -66,14 +70,23 @@ class TipViewController: UIViewController {
                 }
                 
             }
+            
+            //if the current minutes and stored minutes are greater than 50 and the diffrenc between their value is greater than negative 40 make bill field empty
+            else{
+                if(loadedMinutes > -40){
+                    billField.text = ""
+                }
+                //else load up defaults
+                else{
+                    billField.text = defaults.objectForKey("loadbill") as? String
+                    tipLabel.text = defaults.objectForKey("loadtip") as? String
+                    totalLabel.text = defaults.objectForKey("loadtotal") as? String
+                    onEditingChanged(billField)
+                }
                 
-            //figure out how to account for 10 minutes past the hours
-            /*else if(loadedMinutes>50){
-                if(if currentMinutes)
             }
-            */
         }
-        //make keyboard pup up upon entering app
+        //make keyboard pop up upon entering app
         self.billField.becomeFirstResponder()
         
         
@@ -86,8 +99,9 @@ class TipViewController: UIViewController {
         if(NSString(string:billField.text!).doubleValue == 0){
             
         
-        self.totalLabel.alpha = 0
-        self.tipControl.alpha = 0
+        //set bottom row to be invisible until user edits
+         self.billInfo.alpha = 0
+        
         }
         
         //load up user prefs
@@ -104,19 +118,12 @@ class TipViewController: UIViewController {
         self.billField.becomeFirstResponder()
     }
     
-    
-   
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
     @IBAction func onEditingChanged(sender: AnyObject) {
     UIView.animateWithDuration(0.4, animations: {
-        //makes labels appear
-            self.totalLabel.alpha = 1
-            self.tipControl.alpha = 1
+        //makes all labels in the billInfo subview appear
+            self.billInfo.alpha = 1
+        
         })
         
     let defaults = NSUserDefaults.standardUserDefaults()
@@ -145,12 +152,25 @@ class TipViewController: UIViewController {
 
     let total = billAmount + tip
     
+    //create tip totals for multiple people
+    let twoSplit = total / 2
+    let threeSplit = total / 3
+    let fourSplit = total / 4
+    
     tipLabel.text = "\(tip)"
     totalLabel.text = "\(total)"
         
+    twoPayerLabel.text = "\(twoSplit)"
+    threePayerLabel.text = "\(threeSplit)"
+    fourPayerLabel.text = "\(fourSplit)"
+    
+    //format the strings so that they display with commas and currency sign
     tipLabel.text = String(format: "$%.2f", tip)
     totalLabel.text = String(format: "$%.2f", total)
-    
+        
+    twoPayerLabel.text = String(format:"$%.2f",twoSplit)
+    threePayerLabel.text = String(format:"$%.2f",threeSplit)
+    fourPayerLabel.text = String(format:"$%.2f",fourSplit)
         //save bill amounts to display later when view loaded
     defaults.setObject(NSString(string:tipLabel.text!).doubleValue,forKey: "loadtip")
     defaults.setObject(NSString(string:totalLabel.text!).doubleValue,forKey:"loadtotal")
