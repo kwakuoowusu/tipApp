@@ -5,7 +5,7 @@
 
 Submitted by: **Kwaku Owusu**
 
-Time spent: **3.5** hours spent in total
+Time spent: **5.5** hours spent in total
 
 ## User Stories
 The following **required** functionality is complete:
